@@ -1,4 +1,4 @@
-import pyautogui
+import pyautogui  # para instalar: pip install pyautogui
 import time
 
 pyautogui.PAUSE = 1.0  # pausa para execução de cada comando
@@ -27,3 +27,10 @@ pyautogui.write("12345")
 pyautogui.press("tab")  # passa pro butão logar
 pyautogui.press("enter")
 time.sleep(2.0)
+
+
+# Abrir/Importar a base de dados de produtos para cadastrar
+
+import pandas   # instalar: pip install pandas numpy openpyxl
+
+tabela_produtos = pandas.read_csv("produtos.csv")
