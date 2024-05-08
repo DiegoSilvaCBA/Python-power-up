@@ -52,5 +52,5 @@ Antes de executar o script, é necessário configurar algumas variáveis, como a
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões para melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
 
-#Licença 📄
+# Licença 📄
 Este projeto está licenciado sob a [Licença MIT](LICENSE). Consulte o arquivo para obter mais detalhes.
