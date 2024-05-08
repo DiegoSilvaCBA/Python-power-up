@@ -26,3 +26,4 @@ pyautogui.press("tab")  # passa pro próximo campo de formulário
 pyautogui.write("12345")
 pyautogui.press("tab")  # passa pro butão logar
 pyautogui.press("enter")
+time.sleep(2.0)
