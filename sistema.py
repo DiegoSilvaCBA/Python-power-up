@@ -36,33 +36,45 @@ import pandas   # instalar: pip install pandas numpy openpyxl
 tabela = pandas.read_csv("produtos.csv")
 
 
-# Cadastrar um produto
+# Cadastrar produtos
 
-codigo = "MOLO000251"
+for linha in tabela.index:  # passa a linha da tabela
 
-pyautogui.click(x=399, y=258)
-pyautogui.write(codigo)
-pyautogui.press("tab")
+    codigo = str(tabela.loc[linha, "codigo"])
 
-# marca
-pyautogui.write("marca")
-pyautogui.press("tab")
+    time.sleep(2.0)
 
-# tipo
-pyautogui.write("tipo")
-pyautogui.press("tab")
+    pyautogui.click(x=427, y=260)
+    pyautogui.write(codigo)
+    pyautogui.press("tab")
 
-# categoria
-pyautogui.write("categoria")
-pyautogui.press("tab")
+    # marca
+    pyautogui.write(str(tabela.loc[linha, "marca"]))
+    pyautogui.press("tab")
 
-# preço
-pyautogui.write("preço")
-pyautogui.press("tab")
+    # tipo
+    pyautogui.write(str(tabela.loc[linha, "tipo"]))
+    pyautogui.press("tab")
 
-# custo
-pyautogui.write("custo")
-pyautogui.press("tab")
+    # categoria
+    pyautogui.write(str(tabela.loc[linha, "categoria"]))
+    pyautogui.press("tab")
 
-# obs
-pyautogui.write("Observação")
+    # preço
+    pyautogui.write(str(tabela.loc[linha, "preco_unitario"]))
+    pyautogui.press("tab")
+
+    # custo
+    pyautogui.write(str(tabela.loc[linha, "custo"]))
+    pyautogui.press("tab")
+
+    # obs
+    obs = str(tabela.loc[linha, "obs"])
+    if obs != "nan":
+        pyautogui.write(obs)
+
+    pyautogui.press("tab")
+
+    pyautogui.press("enter")
+
+    pyautogui.scroll(10000) # pra arrastar a tela toda pra cima e começar a cadastrar o próximo produto
