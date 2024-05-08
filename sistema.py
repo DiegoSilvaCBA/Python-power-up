@@ -33,4 +33,36 @@ time.sleep(2.0)
 
 import pandas   # instalar: pip install pandas numpy openpyxl
 
-tabela_produtos = pandas.read_csv("produtos.csv")
+tabela = pandas.read_csv("produtos.csv")
+
+
+# Cadastrar um produto
+
+codigo = "MOLO000251"
+
+pyautogui.click(x=399, y=258)
+pyautogui.write(codigo)
+pyautogui.press("tab")
+
+# marca
+pyautogui.write("marca")
+pyautogui.press("tab")
+
+# tipo
+pyautogui.write("tipo")
+pyautogui.press("tab")
+
+# categoria
+pyautogui.write("categoria")
+pyautogui.press("tab")
+
+# preço
+pyautogui.write("preço")
+pyautogui.press("tab")
+
+# custo
+pyautogui.write("custo")
+pyautogui.press("tab")
+
+# obs
+pyautogui.write("Observação")
